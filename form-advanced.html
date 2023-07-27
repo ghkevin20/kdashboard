@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bootstrap Admin Dashboard">
+    <meta name="author" content="Kevin C Rosario">
+
+    <!-- Favicon -->
+    <link rel="icon" href="dist/img/k-brand.ico">
+    <!-- Page Title -->
+    <title>KDashboard - Form Advanced</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/font-awesome/css/fontawesome-all.min.css">
+    <!-- Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="assets/select2/dist/css/select2.min.css">
+
+    <!-- Bootstrap4 DateTimePicker -->
+    <link rel="stylesheet" href="assets/bootstrap4-datetimepicker/build/css/tempusdominus-bootstrap-4.min.css">
+
+    <!-- CropperJS CSS -->
+    <link rel="stylesheet" href="assets/cropperjs/dist/cropper.min.css">
+    <link rel="stylesheet" href="assets/cropperjs/docs/css/main.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/kdashboard.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="border-radius-none fixed">
+    <!-- PreLoader -->
+    <div class="preloader">
+        <div class="preloader-content text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p class="preloader-title text-primary"><strong>K</strong>Dashboard</p>
+        </div>
+    </div>
+    <!-- End PreLoader -->
+    <!-- Main Wrapper -->
+    <div id="main-wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light bg-white">
+                <!-- Navbar Header -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon -->
+                        <b>
+                            <img src="dist/img/K-Brand.png" class="brand-image" height="40" width="40" alt="Logo">
+                        </b>
+                        <!-- End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="brand-text text-white"><strong>K</strong>Dashboard</span>
+                        <!-- End Logo text -->
+                    </a>
+                </div>
+                <!-- End Navbar Header -->
+                <!-- Navbar Collapse -->
+                <div class="navbar-collapse">
+                    <!-- Side Bar Toggle -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item">
+                            <a class="nav-link nav-toggle hidden-md-up waves-effect waves-dark" href="javascript:void(0);">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Side Bar Toggle -->
+
+                    <!-- Right Menu Links -->
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="dist/img/avatar.jpg" class="rounded-circle border border-light" height="32" width="32" alt="...">
+                             </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY border-0 " aria-labelledby="navbarUser">
+                                <div class="text-center">
+                                    <div>
+                                        <img src="dist/img/avatar.jpg" class="rounded-circle border border-light" height="90" width="90" alt="Profile">
+                                    </div>
+                                    <div>
+                                        <span class="font-weight-bold ">Kevin Rosario</span>
+                                    </div>
+                                    <div>
+                                        <span class="small">Administrator</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown-custom-footer text-center">
+                                    <a href="" class="btn-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- End Right Menu Links -->
+                </div>
+                <!-- End Navbar Collapse -->
+            </nav>
+        </header>
+        <!-- End Main Header -->
+        <!-- Left Side Bar -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Nav Links -->
+                <nav class="sidebar-nav">
+                    <ul class="sidebar-nav-list">
+                        <li class="user-profile">
+                            <a href="javascript:void(0);">
+                                <img src="dist/img/avatar.jpg" class="rounded-circle border border-light " width="32" height="32" alt="Profile">
+                                <span class="hide-menu animated fadeIn"> Kevin Rosario</span>
+                            </a>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-title">NAVIGATION</li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-tachometer-alt"></i><span class="hide-menu animated fadeIn"> Dashboard</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="index.html" ><i class="far fa-circle small"></i> Dashboard 1</a></li>
+                                <li><a href="index2.html"><i class="far fa-circle small"></i> Dashboard 2</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-play-circle"></i><span class="hide-menu animated fadeIn"> UI Elements</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="cards.html" ><i class="far fa-circle small"></i> Cards</a></li>
+                                <li><a href="modals.html"><i class="far fa-circle small"></i> Modals</a> </li>
+                                <li><a href="sweet-alert.html"><i class="far fa-circle small"></i> Sweet Alert</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="calendar.html">
+                                <i class="fas fa-calendar-alt"></i><span class="hide-menu animated fadeIn"> Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-title">FORM & TABLE</li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-pencil-alt"></i><span class="hide-menu animated fadeIn"> Forms</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="forms.html" ><i class="far fa-circle small"></i> Basic Form</a></li>
+                                <li><a href="form-advanced.html"><i class="far fa-circle small"></i> Advanced Components</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-table"></i><span class="hide-menu animated fadeIn"> Tables</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="tables.html" ><i class="far fa-circle small"></i> Bootstrap Tables</a></li>
+                                <li><a href="datatables.html"><i class="far fa-circle small"></i> Data Tables</a> </li>
+                            </ul>
+                        </li>
+                        <li class="nav-title">EXTRA</li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-link"></i><span class="hide-menu animated fadeIn"> Pages</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="blank.html" ><i class="far fa-circle small"></i> Blank Page</a></li>
+                                <li><a href="login.html"><i class="far fa-circle small"></i> Login Page</a> </li>
+                                <li><a href="register.html"><i class="far fa-circle small"></i> Register Page</a> </li>
+                                <li><a href="error.html"><i class="far fa-circle small"></i> Error Page</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);"><i class="fas fa-indent"></i>
+                                <span class="hide-menu animated fadeIn"> Multiple Levels</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 1</a></li>
+                                <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 1</a></li>
+                                <li>
+                                    <a class="has-arrow" href="javascript:void(0);"><i class="far fa-circle small"></i> Level 1</a>
+                                    <ul class="collapse">
+                                        <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 2</a></li>
+                                        <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 2</a></li>
+                                        <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 2</a></li>
+                                        <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Nav Links -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- End Left Side Bar -->
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
+            <!-- Container Fluid -->
+            <div class="container-fluid pb-4">
+                <!-- Page Title and Breadcrumb Links -->
+                <div class="row page-titles py-3">
+                    <div class="col-md-5 align-self-center">
+                        <h4><i class="fas fa-edit"></i>Advanced Components</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item">Forms</li>
+                            <li class="breadcrumb-item active">Advanced Components</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- End Page Title and Breadcrumb Links -->
+
+                <!-- Advanced Forms -->
+                <div class="card  border-0 mb-3">
+                    <div class="card-body border-0">
+                        <h4 class="card-title"><span class="l-stick bg-primary"></span> Examples</h4>
+                        <form role="form">
+                            <label class="form-title">Select2 Components</label>
+                            <div class="form-group">
+                                <label>Default:</label>
+                                <select class="form-control select2" name="select-example" style="width:100%">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Multiple:</label>
+                                <select class="form-control select2" name="select-multiple" multiple style="width:100%">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </select>
+                            </div>
+                            <label class="form-title">TempusDominus DatePicker</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Minimum Setup</label>
+                                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                            
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                                            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time Only</label>
+                                        <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3"/>
+                                            <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fas fa-clock"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Date Only</label>
+                                        <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+                                            <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>No Icon</label>
+                                        <input type="text" class="form-control datetimepicker-input" id="datetimepicker5" data-toggle="datetimepicker" data-target="#datetimepicker5" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary "><i class="fas fa-paper-plane"></i> Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- End Advanced Forms -->
+
+                <!-- Cropper -->
+                <div class="card  border-0 mb-3">
+                    <div class="card-body border-0">
+                        <h4 class="card-title"><span class="l-stick bg-primary"></span> CropperJS</h4>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <!-- <h3>Demo:</h3> -->
+                                <div class="img-container">
+                                <img src="assets/cropperjs/docs/images/picture.jpg" alt="Picture">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <!-- <h3>Preview:</h3> -->
+                                <div class="docs-preview clearfix">
+                                <div class="img-preview preview-lg"></div>
+                                <div class="img-preview preview-md"></div>
+                                <div class="img-preview preview-sm"></div>
+                                <div class="img-preview preview-xs"></div>
+                                </div>
+                                <!-- <h3>Data:</h3> -->
+                                <div class="docs-data">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-prepend">
+                                    <label class="input-group-text" for="dataX">X</label>
+                                    </span>
+                                    <input type="text" class="form-control" id="dataX" placeholder="x">
+                                    <span class="input-group-append">
+                                    <span class="input-group-text">px</span>
+                                    </span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-prepend">
+                                    <label class="input-group-text" for="dataY">Y</label>
+                                    </span>
+                                    <input type="text" class="form-control" id="dataY" placeholder="y">
+                                    <span class="input-group-append">
+                                    <span class="input-group-text">px</span>
+                                    </span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-prepend">
+                                    <label class="input-group-text" for="dataWidth">Width</label>
+                                    </span>
+                                    <input type="text" class="form-control" id="dataWidth" placeholder="width">
+                                    <span class="input-group-append">
+                                    <span class="input-group-text">px</span>
+                                    </span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-prepend">
+                                    <label class="input-group-text" for="dataHeight">Height</label>
+                                    </span>
+                                    <input type="text" class="form-control" id="dataHeight" placeholder="height">
+                                    <span class="input-group-append">
+                                    <span class="input-group-text">px</span>
+                                    </span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-prepend">
+                                    <label class="input-group-text" for="dataRotate">Rotate</label>
+                                    </span>
+                                    <input type="text" class="form-control" id="dataRotate" placeholder="rotate">
+                                    <span class="input-group-append">
+                                    <span class="input-group-text">deg</span>
+                                    </span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-prepend">
+                                    <label class="input-group-text" for="dataScaleX">ScaleX</label>
+                                    </span>
+                                    <input type="text" class="form-control" id="dataScaleX" placeholder="scaleX">
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-prepend">
+                                    <label class="input-group-text" for="dataScaleY">ScaleY</label>
+                                    </span>
+                                    <input type="text" class="form-control" id="dataScaleY" placeholder="scaleY">
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="row" id="actions">
+                            <div class="col-md-9 docs-buttons">
+                                <!-- <h3>Toolbar:</h3> -->
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" data-method="setDragMode" data-option="move" title="Move">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.setDragMode(&quot;move&quot;)">
+                                    <span class="fa fa-arrows-alt"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="setDragMode" data-option="crop" title="Crop">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.setDragMode(&quot;crop&quot;)">
+                                    <span class="fa fa-crop-alt"></span>
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" data-method="zoom" data-option="0.1" title="Zoom In">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.zoom(0.1)">
+                                    <span class="fa fa-search-plus"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="zoom" data-option="-0.1" title="Zoom Out">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.zoom(-0.1)">
+                                    <span class="fa fa-search-minus"></span>
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" data-method="move" data-option="-10" data-second-option="0" title="Move Left">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.move(-10, 0)">
+                                    <span class="fa fa-arrow-left"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="move" data-option="10" data-second-option="0" title="Move Right">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.move(10, 0)">
+                                    <span class="fa fa-arrow-right"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="move" data-option="0" data-second-option="-10" title="Move Up">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.move(0, -10)">
+                                    <span class="fa fa-arrow-up"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="move" data-option="0" data-second-option="10" title="Move Down">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.move(0, 10)">
+                                    <span class="fa fa-arrow-down"></span>
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" data-method="rotate" data-option="-45" title="Rotate Left">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.rotate(-45)">
+                                    <span class="fa fa-undo-alt"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="rotate" data-option="45" title="Rotate Right">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.rotate(45)">
+                                    <span class="fa fa-redo-alt"></span>
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" data-method="scaleX" data-option="-1" title="Flip Horizontal">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.scaleX(-1)">
+                                    <span class="fa fa-arrows-alt-h"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="scaleY" data-option="-1" title="Flip Vertical">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.scaleY(-1)">
+                                    <span class="fa fa-arrows-alt-v"></span>
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" data-method="crop" title="Crop">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.crop()">
+                                    <span class="fa fa-check"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="clear" title="Clear">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.clear()">
+                                    <span class="fa fa-times"></span>
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" data-method="disable" title="Disable">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.disable()">
+                                    <span class="fa fa-lock"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary" data-method="enable" title="Enable">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.enable()">
+                                    <span class="fa fa-unlock"></span>
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" data-method="reset" title="Reset">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.reset()">
+                                    <span class="fa fa-sync-alt"></span>
+                                    </span>
+                                </button>
+                                <label class="btn btn-primary btn-upload" for="inputImage" title="Upload image file">
+                                    <input type="file" class="sr-only" id="inputImage" name="file" accept="image/*">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="Import image with Blob URLs">
+                                    <span class="fa fa-upload"></span>
+                                    </span>
+                                </label>
+                                <button type="button" class="btn btn-primary" data-method="destroy" title="Destroy">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.destroy()">
+                                    <span class="fa fa-power-off"></span>
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <div class="btn-group btn-group-crop">
+                                <button type="button" class="btn btn-success" data-method="getCroppedCanvas" data-option="{ &quot;maxWidth&quot;: 4096, &quot;maxHeight&quot;: 4096 }">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.getCroppedCanvas({ maxWidth: 4096, maxHeight: 4096 })">
+                                    Get Cropped Canvas
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-success" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 160, &quot;height&quot;: 90 }">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.getCroppedCanvas({ width: 160, height: 90 })">
+                                    160&times;90
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-success" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 320, &quot;height&quot;: 180 }">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="cropper.getCroppedCanvas({ width: 320, height: 180 })">
+                                    320&times;180
+                                    </span>
+                                </button>
+                                </div>
+                        
+                                <!-- Show the cropped image in modal -->
+                                <div class="modal fade docs-cropped" id="getCroppedCanvasModal" role="dialog" aria-hidden="true" aria-labelledby="getCroppedCanvasTitle" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="getCroppedCanvasTitle">Cropped</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body"></div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <a class="btn btn-primary" id="download" href="javascript:void(0);" download="cropped.jpg">Download</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div><!-- /.modal -->
+                        
+                                <button type="button" class="btn btn-secondary" data-method="getData" data-option data-target="#putData">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.getData()">
+                                    Get Data
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="setData" data-target="#putData">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.setData(data)">
+                                    Set Data
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="getContainerData" data-option data-target="#putData">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.getContainerData()">
+                                    Get Container Data
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="getImageData" data-option data-target="#putData">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.getImageData()">
+                                    Get Image Data
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="getCanvasData" data-option data-target="#putData">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.getCanvasData()">
+                                    Get Canvas Data
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="setCanvasData" data-target="#putData">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.setCanvasData(data)">
+                                    Set Canvas Data
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="getCropBoxData" data-option data-target="#putData">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.getCropBoxData()">
+                                    Get Crop Box Data
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="setCropBoxData" data-target="#putData">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.setCropBoxData(data)">
+                                    Set Crop Box Data
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="moveTo" data-option="0">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.moveTo(0)">
+                                    Move to [0,0]
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="zoomTo" data-option="1">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.zoomTo(1)">
+                                    Zoom to 100%
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="rotateTo" data-option="180">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.rotateTo(180)">
+                                    Rotate 180°
+                                </span>
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-method="scale" data-option="-2" data-second-option="-1">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="cropper.scale(-2, -1)">
+                                    Scale (-2, -1)
+                                </span>
+                                </button>
+                                <textarea class="form-control" id="putData" placeholder="Get data to here or set data with this value"></textarea>
+                        
+                            </div><!-- /.docs-buttons -->
+                        
+                            <div class="col-md-3 docs-toggles">
+                                <!-- <h3>Toggles:</h3> -->
+                                <div class="btn-group d-flex flex-nowrap" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input type="radio" class="sr-only" id="aspectRatio1" name="aspectRatio" value="1.7777777777777777">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 16 / 9">
+                                    16:9
+                                    </span>
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" class="sr-only" id="aspectRatio2" name="aspectRatio" value="1.3333333333333333">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 4 / 3">
+                                    4:3
+                                    </span>
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" class="sr-only" id="aspectRatio3" name="aspectRatio" value="1">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 1 / 1">
+                                    1:1
+                                    </span>
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" class="sr-only" id="aspectRatio4" name="aspectRatio" value="0.6666666666666666">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 2 / 3">
+                                    2:3
+                                    </span>
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" class="sr-only" id="aspectRatio5" name="aspectRatio" value="NaN">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: NaN">
+                                    Free
+                                    </span>
+                                </label>
+                                </div>
+                        
+                                <div class="btn-group d-flex flex-nowrap" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input type="radio" class="sr-only" id="viewMode0" name="viewMode" value="0" checked>
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="View Mode 0">
+                                    VM0
+                                    </span>
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" class="sr-only" id="viewMode1" name="viewMode" value="1">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="View Mode 1">
+                                    VM1
+                                    </span>
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" class="sr-only" id="viewMode2" name="viewMode" value="2">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="View Mode 2">
+                                    VM2
+                                    </span>
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" class="sr-only" id="viewMode3" name="viewMode" value="3">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="View Mode 3">
+                                    VM3
+                                    </span>
+                                </label>
+                                </div>
+                        
+                                <div class="dropdown dropup docs-options">
+                                <button type="button" class="btn btn-primary btn-block dropdown-toggle" id="toggleOptions" data-toggle="dropdown" aria-expanded="true">
+                                    Toggle Options
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="toggleOptions">
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="responsive" type="checkbox" name="responsive" checked>
+                                        <label class="form-check-label" for="responsive">responsive</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="restore" type="checkbox" name="restore" checked>
+                                        <label class="form-check-label" for="restore">restore</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="checkCrossOrigin" type="checkbox" name="checkCrossOrigin" checked>
+                                        <label class="form-check-label" for="checkCrossOrigin">checkCrossOrigin</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="checkOrientation" type="checkbox" name="checkOrientation" checked>
+                                        <label class="form-check-label" for="checkOrientation">checkOrientation</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="modal" type="checkbox" name="modal" checked>
+                                        <label class="form-check-label" for="modal">modal</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="guides" type="checkbox" name="guides" checked>
+                                        <label class="form-check-label" for="guides">guides</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="center" type="checkbox" name="center" checked>
+                                        <label class="form-check-label" for="center">center</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="highlight" type="checkbox" name="highlight" checked>
+                                        <label class="form-check-label" for="highlight">highlight</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="background" type="checkbox" name="background" checked>
+                                        <label class="form-check-label" for="background">background</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="autoCrop" type="checkbox" name="autoCrop" checked>
+                                        <label class="form-check-label" for="autoCrop">autoCrop</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="movable" type="checkbox" name="movable" checked>
+                                        <label class="form-check-label" for="movable">movable</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="rotatable" type="checkbox" name="rotatable" checked>
+                                        <label class="form-check-label" for="rotatable">rotatable</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="scalable" type="checkbox" name="scalable" checked>
+                                        <label class="form-check-label" for="scalable">scalable</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="zoomable" type="checkbox" name="zoomable" checked>
+                                        <label class="form-check-label" for="zoomable">zoomable</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="zoomOnTouch" type="checkbox" name="zoomOnTouch" checked>
+                                        <label class="form-check-label" for="zoomOnTouch">zoomOnTouch</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="zoomOnWheel" type="checkbox" name="zoomOnWheel" checked>
+                                        <label class="form-check-label" for="zoomOnWheel">zoomOnWheel</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="cropBoxMovable" type="checkbox" name="cropBoxMovable" checked>
+                                        <label class="form-check-label" for="cropBoxMovable">cropBoxMovable</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="cropBoxResizable" type="checkbox" name="cropBoxResizable" checked>
+                                        <label class="form-check-label" for="cropBoxResizable">cropBoxResizable</label>
+                                    </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="toggleDragModeOnDblclick" type="checkbox" name="toggleDragModeOnDblclick" checked>
+                                        <label class="form-check-label" for="toggleDragModeOnDblclick">toggleDragModeOnDblclick</label>
+                                    </div>
+                                    </li>
+                                </ul>
+                                </div><!-- /.dropdown -->
+                            </div><!-- /.docs-toggles -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Cropper -->
+            </div>
+            <!-- End Container Fluid -->
+
+            <!-- Footer -->
+            <footer class="footer text-right small"> KDashboard by Kevin Rosario © 2019 </footer>
+            <!-- End Footer -->
+        </div>
+        <!-- End Page Wrapper -->
+    </div>
+    <!-- End Main Wrapper -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SlimScroll -->
+    <script src="assets/slimScroll/jquery.slimscroll.js"></script>
+
+    <!-- Select2 -->
+    <script src="assets/select2/dist/js/select2.full.min.js"></script>
+
+    <!-- Bootstrap4 DateTimePicker -->
+    <script src="assets/moment/min/moment.min.js"></script>
+    <script src="assets/bootstrap4-datetimepicker/build/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- CropperJS JS -->
+    <script src="assets/cropperjs/dist/cropper.min.js"></script>
+    <script src="assets/cropperjs/docs/js/main.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // set Custom Active Sidebar Link
+        let _k_setActiveNav = "href='form-advanced.html'";
+    </script>    
+    <script src="dist/js/kdashboard.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            // Init Select2 Component
+            $('.select2').select2();
+
+            // Bootstrap4 DateTimePicker
+            // Minimum Setup
+            $('#datetimepicker1').datetimepicker({
+                icons: {
+                    // For Font Awesome 5 Free
+                    time: 'fas fa-clock'
+                }
+            });            
+            // TimeOnly
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT',
+                icons: {
+                    // For Font Awesome 5 Free
+                    time: 'fas fa-clock'
+                }
+            });
+            // Date Only
+            $('#datetimepicker4').datetimepicker({
+                format: 'L',
+                icons: {
+                    // For Font Awesome 5 Free
+                    time: 'fas fa-clock'
+                }
+            });
+            // No Icon
+            $('#datetimepicker5').datetimepicker({
+                icons: {
+                    // For Font Awesome 5 Free
+                    time: 'fas fa-clock'
+                }
+            });
+            
+
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bootstrap Admin Dashboard">
+    <meta name="author" content="Kevin C Rosario">
+
+    <!-- Favicon -->
+    <link rel="icon" href="dist/img/k-brand.ico">
+    <!-- Page Title -->
+    <title>KDashboard - PURE</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/font-awesome/css/fontawesome-all.min.css">
+    <!-- Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
+
+    <!-- Pace CSS -->
+    <link rel="stylesheet" href="assets/pace/themes/blue/pace-theme-minimal.css">
+
+    <!-- Custom CSS -->
+    <style>
+        @import url(assets/animate.css/animate.min.css);
+        /*  */
+        html{
+            font-size: 0.880rem!important;
+        }
+
+        body{
+            font-family: "Nunito", sans-serif!important;
+            font-style: normal!important;
+            font-weight: 400!important;
+            line-height: 1.6!important;
+            overflow-x: hidden;
+            height: 100%;
+            margin: 0;
+        }
+
+        body{
+            font-family: "Nunito", sans-serif!important;
+            font-style: normal!important;
+            font-weight: 400!important;
+            line-height: 1.6!important;
+            overflow-x: hidden;
+            height: 100%;
+            margin: 0;
+        }
+
+        body.fixed{
+            background-color: #ecf0f5;
+        }
+
+        /* Header - Mobile First */
+        .fixed .main-header{
+            min-height: 60px;
+            background-color: bisque;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .fixed .main-header .navbar{
+            padding: 0;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            align-items: center;
+            -webkit-align-items: center;
+        }
+
+        .fixed .main-header .navbar .navbar-header{
+            line-height: 60px;
+            background-color: #1b1e21;
+            color: white;
+            padding: 0 10px 0 10px;
+            text-align: center;
+            width: 70px;
+            flex-shrink: 0;
+            -webkit-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+        .fixed .main-header .navbar .navbar-header .navbar-brand {
+            margin-right: 0px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+
+        .fixed .main-header .navbar .navbar-header .navbar-brand .brand-text{
+            display: none;
+        }
+
+        .fixed .main-header .navbar .navbar-header .navbar-brand b > img, 
+        .fixed .main-header .navbar .navbar-collapse .nav-link > img {
+            margin-top: -5px;
+            border: none;
+        }
+
+        .fixed .main-header .navbar .navbar-collapse{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        .fixed .main-header .navbar .navbar-collapse .navbar-nav{
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+        
+        .fixed .main-header .navbar .navbar-collapse .navbar-nav .dropdown-menu {
+            position: absolute;
+            -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10);  
+        }
+
+        .fixed .main-header .navbar .navbar-collapse .navbar-nav > .nav-item > .nav-link {
+            padding-left: .50rem;
+            padding-right: .50rem;
+            font-size: 17px;
+            line-height: 45px;
+        }
+        .fixed .main-header .navbar .navbar-collapse .navbar-nav > .nav-item > .nav-link:hover {
+           background-color:gray;
+           color:white;
+        }
+
+        .fixed .main-header .navbar .navbar-collapse .navbar-nav > .nav-item.show {
+            position: static;
+        }
+
+        .fixed .main-header .navbar .navbar-collapse .navbar-nav > .nav-item.show .dropdown-menu {
+            width: 100%;
+            margin-top: -0.6px;
+            border: none;
+        }
+        /* End Header */
+
+        /* Left Sidebar */
+        .fixed .left-sidebar {
+            -webkit-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+            position: fixed;
+            left: -70px;
+            height: 100%;
+            top: 0px;
+            z-index: 999;
+            padding-top: 62px;
+            background: #1b1e21;
+            -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.10);
+            box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.10);
+            width: 70px;
+        }
+
+        .fixed .left-sidebar .sidebar-nav{
+            background: inherit;
+            padding: 15px 0 0 0px;
+            margin-bottom: 62px;
+        }
+
+        .fixed .left-sidebar .sidebar-nav ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .fixed .left-sidebar .sidebar-nav ul li {
+            list-style: none;
+        }
+
+        .fixed .left-sidebar .sidebar-nav ul li a {
+            color: #687384;
+            padding: 8px 35px 8px 15px;
+            display: block;
+            /* font-size: 14px; */
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .fixed .left-sidebar .sidebar-nav > ul > li > a {
+            line-height: 25px;
+        }
+
+        .fixed .left-sidebar .sidebar-nav > ul > li > a > i{
+            width: 31px;
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+
+        .fixed .left-sidebar .sidebar-nav ul li a:hover {
+            color: #ffffff;
+        }
+        .fixed .left-sidebar .sidebar-nav > ul .active {
+            font-weight: 400;
+            background: #14171a;
+            color: #ffffff;
+        }
+
+        .fixed .left-sidebar .sidebar-nav ul li.nav-divider {
+            height: 1px;
+            background: rgba(103, 103, 103, 0.09);
+            display: block;
+            margin: 15px 0;
+        }
+
+        .fixed .left-sidebar .sidebar-nav ul li.nav-title {
+            font-size: 12px;
+            margin-bottom: 0px;
+            padding: 14px 14px 14px 20px;
+            color: #cccccc;
+            font-weight: 500;
+            display: none;
+        }
+
+        .fixed .left-sidebar .sidebar-nav ul li a .hide-menu{
+            -webkit-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+            display: none;
+        }
+
+        .fixed .left-sidebar .sidebar-nav ul li.nav-title {
+            font-size: 12px;
+            margin-bottom: 0px;
+            padding: 14px 14px 14px 20px;
+            color: #cccccc;
+            font-weight: 500;
+        }
+
+        .fixed .left-sidebar .sidebar-nav .has-arrow {
+            position: relative;
+        }
+
+        .fixed .left-sidebar .sidebar-nav .has-arrow::after {
+            position: absolute;
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-width: 1px 0 0 1px;
+            border-style: solid;
+            border-color: #687384;
+            right: 1em;
+            -webkit-transform: rotate(-45deg) translate(0, -50%);
+            -ms-transform: rotate(-45deg) translate(0, -50%);
+            -o-transform: rotate(-45deg) translate(0, -50%);
+            transform: rotate(-45deg) translate(0, -50%);
+            -webkit-transform-origin: top;
+            -ms-transform-origin: top;
+            -o-transform-origin: top;
+            transform-origin: top;
+            top: 47%;
+            margin-top: 1px;
+            display:none;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+         
+        .fixed .left-sidebar .sidebar-nav .active > .has-arrow::after, 
+        .fixed .left-sidebar .sidebar-nav li > .has-arrow.active::after, 
+        .fixed .left-sidebar .sidebar-nav .has-arrow[aria-expanded="true"]::after {
+            -webkit-transform: rotate(-135deg) translate(0, -50%);
+            -ms-transform: rotate(-135deg) translate(0, -50%);
+            -o-transform: rotate(-135deg) translate(0, -50%);
+            top: 45%;
+            width: 7px;
+            transform: rotate(-135deg) translate(0, -50%);
+        }
+
+        .fixed .left-sidebar .sidebar-nav .has-arrow .collapse{
+            transition: height .35s ease;
+        }
+
+        .fixed .left-sidebar .scroll-sidebar{
+            height: calc(100%);
+            padding-bottom: 0px;
+            position: absolute;
+            overflow-y: scroll;
+        }
+
+        /* End Left Sidebar */
+        
+
+        @media(min-width: 767px){
+            
+            .fixed .main-header .navbar .navbar-collapse .navbar-nav > .nav-item.show .dropdown-menu {
+                width: inherit;
+            }
+
+            .fixed .left-sidebar .sidebar-nav > ul > li > a {
+                padding: 11px 19px;
+                /* width: 70px; */
+            }
+
+            .fixed .left-sidebar .sidebar-nav ul li > a >i {
+                padding-left: 5px;
+            }
+
+            .fixed .left-sidebar {
+                /* width: 70px; */
+                left: 0;
+            }
+
+            .fixed .left-sidebar .sidebar-nav .sidebar-nav-list > li > ul {
+                position: absolute;
+                left: 70px;
+                top: 46px;
+                width: 220px;
+                padding-bottom: 10px;
+                z-index: 1001;
+                background: #14171a;
+                /* display: none; */
+                padding-left: 1px;
+            }
+
+            .fixed .left-sidebar .sidebar-nav .sidebar-nav-list > li {
+                position: relative;
+            }
+
+            
+        }
+
+        @media (min-width: 1023px) {
+            .fixed .main-header .navbar .navbar-header .navbar-brand .brand-text{
+                display: inline-block;
+            }
+
+            .fixed .main-header .navbar .navbar-header{
+                width: 240px;
+                text-align: left;
+            }
+
+            .fixed .left-sidebar {
+                width: 240px;
+            }
+
+            .fixed .left-sidebar .sidebar-nav ul li > a {
+                /* padding: 13px 17px; */
+                width: 240px;
+            }
+            .fixed .left-sidebar .sidebar-nav ul li > a >i {
+                padding-left: 2px;
+            }
+
+            .fixed .left-sidebar .sidebar-nav ul li.nav-title {
+                display: block;
+            }
+
+            .fixed .left-sidebar .sidebar-nav .has-arrow::after {
+                display:block;
+            }
+            
+            .fixed .left-sidebar .sidebar-nav ul li a .hide-menu{
+                display: inline;
+            }
+
+            .fixed .left-sidebar .sidebar-nav .sidebar-nav-list > li > ul {
+                position: relative;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 0;
+                z-index: 999;
+                background: #14171a;
+            }
+        }
+
+        @media(max-width:1023px){
+            .fixed .left-sidebar .sidebar-nav .sidebar-nav-list > li:hover > a .hide-menu{
+                display: inline-block;
+            }
+            .fixed .left-sidebar .sidebar-nav .sidebar-nav-list > li:hover > a {
+                width: 290px;
+                background: #14171a;
+            }
+            .fixed .left-sidebar .sidebar-nav .sidebar-nav-list > li:hover > ul,
+            .fixed .left-sidebar .sidebar-nav .sidebar-nav-list > li:hover > ul.collapse {
+                display: block;
+            }
+            
+        }
+
+
+
+    </style>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="border-radius-none fixed">
+    <!-- PreLoader -->
+    <!-- <div class="preloader">
+        <div class="preloader-content text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p class="preloader-title text-primary"><strong>K</strong>Dashboard</p>
+        </div>
+    </div> -->
+    <!-- End PreLoader -->
+    <!-- Main Wrapper -->
+    <div id="main-wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light bg-white">
+                <!-- Navbar Header -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon -->
+                        <b>
+                            <img src="dist/img/K-Brand.png" class="brand-image" height="40" width="40" alt="Logo">
+                        </b>
+                        <!-- End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="brand-text text-white"><strong>K</strong>Dashboard</span>
+                        <!-- End Logo text -->
+                    </a>
+                </div>
+                <!-- End Navbar Header -->
+                <!-- Navbar Collapse -->
+                <div class="navbar-collapse">
+                    <!-- Side Bar Toggle -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item">
+                            <a class="nav-link nav-toggle hidden-md-up waves-effect waves-dark" href="javascript:void(0);">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Side Bar Toggle -->
+
+                    <!-- Right Menu Links -->
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="dist/img/avatar.jpg" class="rounded-circle border border-light" height="32" width="32" alt="...">
+                             </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY border-0 " aria-labelledby="navbarUser">
+                                <div class="text-center">
+                                    <div>
+                                        <img src="dist/img/avatar.jpg" class="rounded-circle border border-light" height="90" width="90" alt="Profile">
+                                    </div>
+                                    <div>
+                                        <span class="font-weight-bold ">Kevin Rosario</span>
+                                    </div>
+                                    <div>
+                                        <span class="small">Administrator</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown-custom-footer text-center">
+                                    <a href="" class="btn-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- End Right Menu Links -->
+                </div>
+                <!-- End Navbar Collapse -->
+            </nav>
+        </header>
+        <!-- End Main Header -->
+        <!-- Left Side Bar -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Nav Links -->
+                <nav class="sidebar-nav">
+                    <ul class="sidebar-nav-list">
+                        <li class="user-profile">
+                            <a href="javascript:void(0);">
+                                <img src="dist/img/avatar.jpg" class="rounded-circle border border-light " width="32" height="32" alt="Profile">
+                                <span class="hide-menu animated fadeIn"> Kevin Rosario</span>
+                            </a>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-title">NAVIGATION</li>
+                        <li>
+                            <a href="calendar.html">
+                                <i class="fas fa-calendar-alt"></i><span class="hide-menu animated fadeIn"> Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);" data-toggle="collapse" data-target="#d">
+                                <i class="fas fa-tachometer-alt"></i><span class="hide-menu animated fadeIn"> Dashboard</span>
+                            </a>
+                            <ul class="collapse" id="d">
+                                <li><a href="index.html" ><i class="far fa-circle small"></i> Dashboard 1</a></li>
+                                <li><a href="index2.html"><i class="far fa-circle small"></i> Dashboard 2</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-play-circle"></i><span class="hide-menu animated fadeIn"> UI Elements</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="cards.html" ><i class="far fa-circle small"></i> Cards</a></li>
+                                <li><a href="modals.html"><i class="far fa-circle small"></i> Modals</a> </li>
+                                <li><a href="sweet-alert.html"><i class="far fa-circle small"></i> Sweet Alert</a> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Nav Links -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- End Left Side Bar -->
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
+            <!-- Container Fluid -->
+            <!-- <div class="container-fluid pb-4"> -->
+                <!-- Page Title and Breadcrumb Links -->
+                <!-- <div class="row page-titles py-3">
+                    <div class="col-md-5 align-self-center">
+                        <h4><i class="fas fa-file"></i>Blank <small class="text-muted">Subtitle</small></h4>
+                    </div>
+                    <div class="col-md-7 align-self-center">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item">Pages</li>
+                            <li class="breadcrumb-item active">Blank</li>
+                        </ol>
+                    </div>
+                </div> -->
+                <!-- End Page Title and Breadcrumb Links -->
+                <!-- <div class="card  border-0 mb-3">
+                    <div class="card-body border-0">
+                        <h4 class="card-title"><span class="l-stick bg-primary"></span> Blank Page Sample</h4>
+                        <p class="card-text">Some content here</p>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+            <!-- End Container Fluid -->
+            <!-- Footer -->
+            <!-- <footer class="footer text-right small"> KDashboard by Kevin Rosario © 2019 </footer> -->
+            <!-- End Footer -->
+        </div>
+        <!-- End Page Wrapper -->
+    </div>
+    <!-- End Main Wrapper -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Pace JS -->
+    <script src="assets/pace/pace.min.js"></script>
+
+    <!-- SlimScroll -->
+    <script src="assets/slimScroll/jquery.slimscroll.js"></script>
+
+  
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            // Left Sidebar Dropdown Menu
+            let sidebarLinks = document.querySelectorAll('.sidebar-nav-list li a.has-arrow');
+            let subMenuIndex = 1;
+            sidebarLinks.forEach(function(e){
+                let collapse = e.nextElementSibling;
+                collapse.id = "menu-collapse-"+subMenuIndex;
+                e.setAttribute('data-toggle','collapse');
+                e.setAttribute('data-target','#menu-collapse-'+subMenuIndex);
+
+                let originalClass = e.className;
+                e.addEventListener('click',function(){
+                    let ariaExpanded = e.getAttribute('aria-expanded');
+
+                    let parent = e.parentElement.parentElement;
+                    let menu = parent.querySelectorAll('a.active');
+                    var elem = e;
+                    menu.forEach(function(e){
+                        if(e != elem){
+                            e.setAttribute('aria-expanded', false);
+                            e.setAttribute('class', e.getAttribute('class').replace('active',''));
+                            e.nextElementSibling.setAttribute('class', e.nextElementSibling.getAttribute('class').replace('show',''));
+                        }
+                    });
+
+                    if(collapse.className != "collapsing"){
+                        if (ariaExpanded == null || ariaExpanded == 'false'){
+                            e.className = originalClass+ " active";
+                        }else{
+                            e.className = originalClass;
+                        }
+                    }
+                });
+
+                subMenuIndex++;
+            });
+             // End Left Sidebar Dropdown Menu
+            $(".scroll-sidebar").slimScroll({size:'5px',height:($(window).height() - $(".main-header").height()) + "px",position:'left'});
+        });
+    </script>
+</body>
+</html>

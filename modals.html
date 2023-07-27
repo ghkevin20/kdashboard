@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bootstrap Admin Dashboard">
+    <meta name="author" content="Kevin C Rosario">
+
+    <!-- Favicon -->
+    <link rel="icon" href="dist/img/k-brand.ico">
+    <!-- Page Title -->
+    <title>KDashboard - Modals</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/font-awesome/css/fontawesome-all.min.css">
+    <!-- Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/kdashboard.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="border-radius-none fixed">
+    <!-- PreLoader -->
+    <div class="preloader">
+        <div class="preloader-content text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p class="preloader-title text-primary"><strong>K</strong>Dashboard</p>
+        </div>
+    </div>
+    <!-- End PreLoader -->
+    <!-- Main Wrapper -->
+    <div id="main-wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light bg-white">
+                <!-- Navbar Header -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon -->
+                        <b>
+                            <img src="dist/img/K-Brand.png" class="brand-image" height="40" width="40" alt="Logo">
+                        </b>
+                        <!-- End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="brand-text text-white"><strong>K</strong>Dashboard</span>
+                        <!-- End Logo text -->
+                    </a>
+                </div>
+                <!-- End Navbar Header -->
+                <!-- Navbar Collapse -->
+                <div class="navbar-collapse">
+                    <!-- Side Bar Toggle -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item">
+                            <a class="nav-link nav-toggle hidden-md-up waves-effect waves-dark" href="javascript:void(0);">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Side Bar Toggle -->
+
+                    <!-- Right Menu Links -->
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="dist/img/avatar.jpg" class="rounded-circle border border-light" height="32" width="32" alt="...">
+                             </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY border-0 " aria-labelledby="navbarUser">
+                                <div class="text-center">
+                                    <div>
+                                        <img src="dist/img/avatar.jpg" class="rounded-circle border border-light" height="90" width="90" alt="Profile">
+                                    </div>
+                                    <div>
+                                        <span class="font-weight-bold ">Kevin Rosario</span>
+                                    </div>
+                                    <div>
+                                        <span class="small">Administrator</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown-custom-footer text-center">
+                                    <a href="" class="btn-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- End Right Menu Links -->
+                </div>
+                <!-- End Navbar Collapse -->
+            </nav>
+        </header>
+        <!-- End Main Header -->
+        <!-- Left Side Bar -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Nav Links -->
+                <nav class="sidebar-nav">
+                    <ul class="sidebar-nav-list">
+                        <li class="user-profile">
+                            <a href="javascript:void(0);">
+                                <img src="dist/img/avatar.jpg" class="rounded-circle border border-light " width="32" height="32" alt="Profile">
+                                <span class="hide-menu animated fadeIn"> Kevin Rosario</span>
+                            </a>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-title">NAVIGATION</li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-tachometer-alt"></i><span class="hide-menu animated fadeIn"> Dashboard</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="index.html" ><i class="far fa-circle small"></i> Dashboard 1</a></li>
+                                <li><a href="index2.html"><i class="far fa-circle small"></i> Dashboard 2</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-play-circle"></i><span class="hide-menu animated fadeIn"> UI Elements</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="cards.html" ><i class="far fa-circle small"></i> Cards</a></li>
+                                <li><a href="modals.html"><i class="far fa-circle small"></i> Modals</a> </li>
+                                <li><a href="sweet-alert.html"><i class="far fa-circle small"></i> Sweet Alert</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="calendar.html">
+                                <i class="fas fa-calendar-alt"></i><span class="hide-menu animated fadeIn"> Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-title">FORM & TABLE</li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-pencil-alt"></i><span class="hide-menu animated fadeIn"> Forms</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="forms.html" ><i class="far fa-circle small"></i> Basic Form</a></li>
+                                <li><a href="form-advanced.html"><i class="far fa-circle small"></i> Advanced Components</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-table"></i><span class="hide-menu animated fadeIn"> Tables</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="tables.html" ><i class="far fa-circle small"></i> Bootstrap Tables</a></li>
+                                <li><a href="datatables.html"><i class="far fa-circle small"></i> Data Tables</a> </li>
+                            </ul>
+                        </li>
+                        <li class="nav-title">EXTRA</li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);">
+                                <i class="fas fa-link"></i><span class="hide-menu animated fadeIn"> Pages</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="blank.html" ><i class="far fa-circle small"></i> Blank Page</a></li>
+                                <li><a href="login.html"><i class="far fa-circle small"></i> Login Page</a> </li>
+                                <li><a href="register.html"><i class="far fa-circle small"></i> Register Page</a> </li>
+                                <li><a href="error.html"><i class="far fa-circle small"></i> Error Page</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:void(0);"><i class="fas fa-indent"></i>
+                                <span class="hide-menu animated fadeIn"> Multiple Levels</span>
+                            </a>
+                            <ul class="collapse">
+                                <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 1</a></li>
+                                <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 1</a></li>
+                                <li>
+                                    <a class="has-arrow" href="javascript:void(0);"><i class="far fa-circle small"></i> Level 1</a>
+                                    <ul class="collapse">
+                                        <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 2</a></li>
+                                        <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 2</a></li>
+                                        <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 2</a></li>
+                                        <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);"><i class="far fa-circle small"></i> Level 1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Nav Links -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- End Left Side Bar -->
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
+            <!-- Container Fluid -->
+            <div class="container-fluid pb-4">
+                <!-- Page Title and Breadcrumb Links -->
+                <div class="row page-titles py-3">
+                    <div class="col-md-5 align-self-center">
+                        <h4><i class="fas fa-comment"></i>Modals</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item">UI Elements</li>
+                            <li class="breadcrumb-item active">Modals</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- End Page Title and Breadcrumb Links -->
+
+                <!-- Modal Examples -->
+                <div class="card  border-0 mb-3">
+                    <div class="card-body border-0">
+                        <h4 class="card-title"><span class="l-stick bg-primary"></span> Examples</h4>
+
+                        <!-- Normal Modal -->
+                            <!-- Trigger the modal with a button -->
+                            <button type="button" class="btn btn-light " data-toggle="modal" data-target="#modalNormal">Launch Normal Modal</button>
+
+                            <!-- Modal -->
+                            <div id="modalNormal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Modal Header</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light " data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Modal -->
+                        <!-- End Normal Modal -->
+                        <!-- Small Modal -->
+                            <!-- Trigger the modal with a button -->
+                            <button type="button" class="btn btn-info " data-toggle="modal" data-target="#modalSmall">Launch Small Modal</button>
+
+                            <!-- Modal -->
+                            <div id="modalSmall" class="modal fade" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                    <!-- Modal content-->
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Modal Header</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light " data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Modal -->
+                        <!-- End Small Modal -->
+                        <!-- Large Modal -->
+                            <!-- Trigger the modal with a button -->
+                            <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#modalLarge">Launch Large Modal</button>
+
+                            <!-- Modal -->
+                            <div id="modalLarge" class="modal fade" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                    <!-- Modal content-->
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Modal Header</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light " data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Modal -->
+                        <!-- End Large Modal -->
+                        <!-- Extra Large Modal -->
+                            <!-- Trigger the modal with a button -->
+                            <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#modalExtraLarge">Launch Extra Large Modal</button>
+
+                            <!-- Modal -->
+                            <div id="modalExtraLarge" class="modal fade" role="dialog">
+                                <div class="modal-dialog modal-xl">
+                                    <!-- Modal content-->
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Modal Header</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light " data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Modal -->
+                        <!-- End Extra Large Modal -->
+
+                        
+                    </div>
+                </div>
+                <!-- End Modal Examples -->
+
+            </div>
+            <!-- End Container Fluid -->
+            <!-- Footer -->
+            <footer class="footer text-right small"> KDashboard by Kevin Rosario © 2019 </footer>
+            <!-- End Footer -->
+        </div>
+        <!-- End Page Wrapper -->
+    </div>
+    <!-- End Main Wrapper -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SlimScroll -->
+    <script src="assets/slimScroll/jquery.slimscroll.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // set Custom Active Sidebar Link
+        let _k_setActiveNav = "href='modals.html'";
+    </script>    
+    <script src="dist/js/kdashboard.js"></script>
+    
+</body>
+</html>
